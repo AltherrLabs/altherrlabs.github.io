@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: #050505;
+  color: #f7f7f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+.page {
+  flex: 1;
+  display: grid;
+  place-items: center;
+  padding: 48px 20px;
+}
+
+.hero {
+  width: 100%;
+  max-width: 760px;
+  text-align: center;
+  animation: fadeIn 1.2s ease both;
+}
+
+.logo-wrap {
+  margin: 0 auto 28px;
+}
+
+.logo {
+  width: min(420px, 90vw);
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.tagline {
+  margin: 18px 0 0;
+  font-size: clamp(1.35rem, 4vw, 2.25rem);
+  letter-spacing: 0.02em;
+  font-weight: 300;
+}
+
+.intro {
+  margin: 24px auto 0;
+  max-width: 620px;
+  color: #cfcfcf;
+  font-size: clamp(1rem, 2.3vw, 1.18rem);
+  line-height: 1.7;
+}
+
+.divider {
+  width: 72px;
+  height: 1px;
+  background: #777;
+  margin: 44px auto;
+  opacity: 0.7;
+}
+
+.coming-soon .label {
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  color: #9c9c9c;
+  font-size: 0.72rem;
+  margin-bottom: 18px;
+}
+
+.coming-soon h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  font-weight: 300;
+  letter-spacing: 0.01em;
+}
+
+.coming-soon p {
+  color: #bfbfbf;
+  line-height: 1.7;
+  max-width: 540px;
+  margin: 18px auto 0;
+}
+
+.signup {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin: 38px auto 0;
+  max-width: 520px;
+}
+
+.signup input {
+  flex: 1;
+  min-width: 0;
+  background: transparent;
+  border: 1px solid #666;
+  color: #fff;
+  padding: 14px 16px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.signup input::placeholder {
+  color: #888;
+}
+
+.signup button {
+  border: 1px solid #f7f7f7;
+  background: #f7f7f7;
+  color: #050505;
+  padding: 14px 18px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.signup button:hover {
+  opacity: 0.82;
+}
+
+.small-note {
+  color: #777;
+  font-size: 0.8rem;
+  margin-top: 14px;
+}
+
+footer {
+  padding: 24px 20px;
+  text-align: center;
+  color: #777;
+  font-size: 0.82rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .signup {
+    flex-direction: column;
+  }
+
+  .signup button,
+  .signup input {
+    width: 100%;
+  }
+}
